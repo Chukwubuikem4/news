@@ -19,7 +19,7 @@
 }
 
 body{
-  padding: 1.2em 1em;
+  padding: 1.2em 1em 0 1em;
   margin: 0.7em;
   font-family: "Inter";
 }
@@ -27,7 +27,7 @@ body{
 nav#navigation{
   display: flex;
   justify-content: space-between;
-  
+  padding-bottom: 1.5em; 
 }
 
 .logo img{
@@ -126,9 +126,10 @@ ul#main-navigation{
 /* Section 1 */
 section.I .box-A{
   background: url("images/image-web-3-mobile.jpg") center center no-repeat;
-  background-size: contain;
+  background-size: cover;
   max-width: 100%;
   padding: 8em 0 12em 0;
+  margin-bottom: 1.5em;
 }
 
 .box-B h1{
@@ -264,11 +265,11 @@ section.II .text-container p{
   
 }
 
-@media(min-width: 1150px){
+@media(min-width: 1000px){
 
   body{
     margin: 3em;
-    padding: 2.5em 5em 5em 5em;
+    padding: 2.5em 5em 0em 5em;
   }
 
   /* Navigation */
@@ -362,6 +363,8 @@ section.II .text-container p{
   }
   
 
+
+  /* Section B */
   section.II{
     padding: 4em 0;
     display: grid;
@@ -391,6 +394,77 @@ section.II .text-container p{
 
 }
 
+
+/* Adjusting Section A for 1000px - 1250px */
+@media(1000px <= width <= 1250px){
+
+  body{
+    margin: 2em;
+    padding: 1.5em 2.5em 0 2.5em;
+  }
+
+  /* Section A */
+  section.I{
+    row-gap: 1em;
+  }
+
+  section.I .box-A{
+    margin-bottom: 0;
+  }
+
+  .box-B .text-container {
+    margin-left: 0em;
+    width: 100%;
+  }
+
+  .box-B .text-container p{
+    padding-bottom: 1em;
+  }
+
+  .box-B .text-container a:hover{
+    background-color: var(--very-dark-blue);
+  }
+
+}
+
+
+/* Adjusting Section B for 1000px - 1148px */
+@media(1000px <= width <= 1148px){
+
+  /* Section B */
+  section.II{
+    padding: 4em 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  section.II .container img{
+    width: 100px;
+    height: 160px;
+    margin: 0 15px;
+  }
+
+  section.II .container img.I{
+    margin-left: 0;
+  }
+
+  section.II .container img.II{
+    margin-left: 12px;
+  }
+
+  section.II .text-container a:hover{
+    color: var(--soft-red);
+  }
+
+  section.II .text-container p{
+    margin: 0;
+    
+  }
+
+}
+
+
+/* Adjusting Section B for 1378px and above */
 @media(max-width: 1378px){
 
   section.II .text-container h1{
@@ -415,6 +489,8 @@ section.II .text-container p{
   }
   
 }
+
+
 
 
 
